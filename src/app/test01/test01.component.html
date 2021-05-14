@@ -1,0 +1,26 @@
+<ng-container>
+  <h1>Test 1 component</h1>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <h2 class="mb-none">Book an Appointment</h2>
+    <p>Our Investing Topics</p>
+    <h3 class="mt-sm">Pick a topic, then we'll find a time and place</h3>
+    <div class="content" fxLayout.gt-xs="row wrap" fxLayout.xs="column" fxLayoutAlign.gt-xs="start center"
+         fxLayoutAlign.xs="center stretch"
+         fxLayoutGap="5px">
+      <ng-container *ngFor="let actionButtonContext of actionButtonContexts">
+        <ng-container *ngTemplateOutlet="actionButton context: actionButtonContext"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #actionButton let-context="context">
+  <button fxLayoutAlign.gt-xs="start center" fxFlex.gt-xs="45" fxFlex.xs="100" type="button"
+          class="button green-btn mt-md"
+          (click)="context?.click(context?.type)">
+    {{context?.label}}
+  </button>
+</ng-template>
+
+
+

@@ -1,0 +1,81 @@
+$font-family: "Helvetica Neue";
+$primary-font-color: #2d3339;
+$secondary-font-color: #62c21c;
+$tertiary-font-color: #e7e7e7;
+$font-light: 300;
+
+h1, h2, h3, p {
+  font-family: $font-family;
+  color: $primary-font-color;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 1.625rem;
+  font-weight: 300;
+  line-height: 1.5px;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.556;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5334;
+}
+
+.mb {
+  &-none {
+    margin-bottom: 0;
+  }
+
+  &-sm {
+    margin-bottom: 2px;
+  }
+}
+
+.mt {
+  &-none {
+    margin-top: 0;
+  }
+
+  &-sm {
+    margin-top: 2px;
+  }
+
+  &-md {
+    margin-top: 10px;
+  }
+}
+
+.button {
+  color: #038203;
+  background: transparent;
+  border: 1px solid black;
+  font-weight: normal;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.green-btn {
+  border-color: #04AA6D;
+  border-radius: 5px;
+  color: green;
+}
+
+.green-btn:hover {
+  background-color: $tertiary-font-color;
+  color: green;
+}
+
+.content {
+  width: 600px;
+}
